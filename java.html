@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aprende a programar jugando</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>LearnGaming</h1>
+        
+        </div>
+        
+        <div class="barra">
+             
+			<ul>
+				<li class="barra-primero"><a href="index.html">Inicio</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li><a href="desarrollo.html">En desarrollo...</a></li>
+			</ul>
+            
+            
+        </div>
+        <div class="barra-lateral">
+           
+                <div class="sidebar-header">
+                <h2>Menú</h2>
+                </div>
+         
+            
+            <div class="secciones">
+             <ul class="menu-lateral">
+                  <li class="externo"><input type="checkbox" id="lecciones"> <label for=lecciones>Lecciones</label>
+                  <ul class="interno">
+                   <li><a href="java.html">Java </a></li>
+                   <li><a href="c.html">C</a></li>
+                   <li><a href="html.html">HTML</a></li>
+                   <li><a href="css.html">CSS </a></li>
+                  </ul>
+                  </li>
+
+               <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Juegos</label>
+               <ul class="interno">
+                <li><a href="JuegoDungeon.html">Dungeon Code</a></li>
+
+                </ul>
+                </li>
+                 <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Herramientas externas</label>
+                 <ul class="interno">
+                   <li><a href="externas.html">Páginas de Referencia </a></li>
+                    <li><a href="https://www.codingame.com/start">CodinGame </a></li>
+                   <li><a href="https://checkio.org/">Checkio </a></li>
+                    <li><a href="https://codecombat.com/">CodeCombat </a></li>
+                 </ul>
+                     <li class="externo"><input type="checkbox" id="descargas"> <label for=juegos>Descargas</label>
+                     <ul class="interno">
+                      <li><a href="descarga.html">Dungeon Code</a></li>
+                      </ul>
+            </ul> 
+         
+         
+        
+            
+           </div>  
+        </div>
+        <div class="contenido-principal">
+            <div class="indice">
+                <h1>Indice</h1>
+    
+            <ol class="lista-indice">
+       
+             <li><a href=#Intro>Introducción</a></li>
+             <li><a href=#Sintaxis>Estructura</a></li>
+             <li><a href=#Variables>Variables y tipos de datos</a></li>   
+             <li><a href=#Control>Estructuras de control</a></li>   
+             <li><a href=#POO>Conceptos de POO</a></li>   
+                
+                
+            </ol>  
+                      </div>  
+            
+                <h2 style="text-align: left" id="Intro">1. Introducción</h2>
+                <p>
+                    Java es un lenguaje de programación orientado a objetos (POO), el cual es muy popular y nos permite hacer desde aplicaciones de escritorio básicas, hasta videojuegos, webs o aplicaciones móviles.
+                     A lo largo de esta lección aprenderás la sintaxis para escribir programas en java y los conceptos asociados a las clases y la programación orientada a objetos.  
+                    
+                </p>
+                <img src="images/java.png" alt="java" align="center"/>
+                
+                <HR width="20%"> 
+                   <h2 style="text-align: left" id="Sintaxis">2. Estructura</h2>
+                <p>
+                    Vamos a explicar con un ejemplo la estructura que suele tener cualquier fichero escrito en Java.
+                </p>
+                <pre>
+    package src.Pruebas
+    import java.util.Scanner;
+
+    public class Prueba {
+
+      public static void main(String[] args) {
+
+        Scanner escaner = new Scanner(System.in);
+        System.out.print("Introduce primer número: ");
+
+        int num1 = scan.nextInt();
+        
+        System.out.print("Introduce segundo número: ");
+        int num2 = scan.nextInt();
+
+        scan.close();
+        
+        int producto = num1*num2;
+
+        System.out.println("Resultado: "+producto);
+        }
+</pre>
+                <p>
+                   Normalmente los ficheros comienzan con la sentencia de paquete, que se usa para agrupar clases relacionadas. En este caso hemos definido como paquete de la clase actual el directorio src/Pruebas/
+                   Esto nos permite poder importar clases en caso de que sean accesibles, como hacemos en la segunda linea, en la cual importamos la clase Scanner que es de utilidad para la lectura de la entrada por linea de comandos
+                   Tras esto se declaran las clases que se van a utilizar, y dentro de la clase principal que se ejecuta debe aparecer el método main() que es el que se encarga de ejecutar el código.
+                   
+                    
+                </p>
+                <HR width="20%"> 
+                 <h5 style="text-align: left" id="Comentarios">2.1 Comentarios</h5>
+                <p>
+                   Los comentarios en Java son iguales que los de C. Se usa la secuencia /* para abrir el comentario y la secuencia */ para cerrarlo. También se permite usando la doble barra // para comentarios de una linea.
+                </p>
+                <HR width="20%"> 
+                 <h2 style="text-align: left" id="Variables">3.Variables y tipos de datos</h2>
+                <p>
+                    Las variables Java son un espacio en memoria que almacena un valor que necesitamos y que manipulamos. La sintaxis es la siguiente:
+                </p>
+                <pre>
+        [modificador de acceso] tipo_variable identificador;
+                </pre>
+                <p>
+                    El tipo de variable puede ser una <a href="#Clases">clase</a> o un tipo primitivo que explicaremos a continuación.  El identificador es el nombre (único) que se le da la variable. Hay que tener en cuenta que se distinguen entre mayusculas y minúsculas y hay una serie de normas a seguir.
+                    No se puede comenzar el nombre de una variable por un número o un signo de puntuación, y normalmente (no obligatorio) se suele empezar con una letra. <br>
+                    El <a href="#Acceso">modificador de acceso</a> es explicado más adelante.
+                    <br>
+                    
+                </p>
+                 <HR width="20%"> 
+                 <h5 style="text-align: left" id="Tipos">3.1 Tipos de datos primitivos </h5> 
+                 <br>
+                  <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Tamaño</th>
+                        <th>Valor mínimo</th>
+                        <th>Valor máximo</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>int</td>
+                        <td>32 bits</td>
+                        <td>-2147483648</td>
+                        <td>2147483647</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>64 bits</td>
+                        <td>-9223372036854775808</td>
+                        <td>9223372036854775807</td>
+                    </tr>
+                                        <tr>
+                        <td>byte</td>
+                        <td>8 bits</td>
+                        <td>-128</td>
+                        <td>127</td>
+                    </tr>
+                      <tr>
+                        <td>short</td>
+                        <td>16 bits</td>
+                        <td>-32768</td>
+                        <td>32767</td>
+                    </tr>
+                     <tr>
+                        <td>float</td>
+                        <td>32 bits</td>
+                        <td>-3.402823e38</td>
+                        <td>3.402823e38</td>
+                    </tr>
+                    <tr>
+                        <td>double</td>
+                        <td>64 bits</td>
+                        <td>-1.79769313486232e308</td>
+                        <td>1.79769313486232e308</td>
+                    </tr>
+                    <tr>
+                        <td>char</td>
+                        <td>16 bits</td>
+                        <td>'\u0000'</td>
+                        <td>'\uffff'</td>
+                    </tr>
+                  </table>
+                <HR width="20%"> 
+                
+                     <h2 style="text-align: left" id="Control">4. Estructuras de control</h2>
+                <p>
+                   Los comentarios en Java son iguales que los de C. Se usa la secuencia /* para abrir el comentario y la secuencia */ para cerrarlo. También se permite usando la doble barra // para comentarios de una linea.
+                </p>
+                
+                
+                <HR width="20%"> 
+                <h2 style="text-align: left" id="POO">5. Conceptos de POO</h2>
+                <p>
+                    La programación orientada a objetos (POO) funciona mediante la creación de clases y objetos que almacenan tanto datos como métodos. La POO tiene ciertas ventajas sobre la programación
+                    por procedimientos.  
+                </p>
+                <ul>
+                    <li>La POO es más rapida y facil de ejecutar</li>
+                    <li>Proporciona una estructura más clara para los programas</li>
+                    <li>Ayuda a seguir el principio DRY (Don't Repeat Yourself) lo que hace que el código sea mucho más reutilizable, facil de depurar y mantener</li>
+                </ul>
+                
+                <HR width="20%"> 
+                       <h5 style="text-align: left" id="Clases">5.1 Clases/Objetos </h5>  
+                <p>Clase
+                Las clases representan los prototipos de los objetos que tenemos en el mundo real. Es decir, es una generalización de un conjunto de objetos que guardan relación entre
+                ellos, compartiendo atributos y funcionalidades comunes. A su vez los objetos serán instancias de una determinada clase.
+                <br>
+                Un ejemplo de de clase sería la siguiente:
+                </p>
+                <pre>
+                public class Persona {
+                  private string nombre;
+                  private string apellidos;
+                  public int edad;
+                  private string email;
+
+                  public void andar()
+                  public void comer()
+                  public void dormir()
+                }
+
+                </pre>
+                <p>Esta clase tendrá una serie de atributos, como son propiedades asignables a una persona como su nombre,apellidos, edad o su correo eléctronico. Además tendrá una serie de métodos
+                que son funcionalidades que una persona puede hacer como andar, comer o dormir.
+                <br>
+                En Java, se usa el operador . para acceder a los campos de un objeto y el operador new para instanciarlos.</p>
+                
+                
+                <pre>
+                    
+                Persona miPersona = new Persona();
+                miPersona.andar();
+                miPersona.edad = 28;
+                </pre>
+                <HR width="20%"> 
+                 <h5 style="text-align: left" id="Acceso">5.2 Modificadores de acceso</h5>
+                <p>
+                Los modificadores de acceso son palabras claves que se usan para definir el nivel de acceso para las clases, atributos y métodos. Concretamente para las clases tenemos lo siguiente:
+                <br>
+                </p>
+                <table class="table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th>Modificador</th>
+                        <th>Descripción</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td>public</td>
+                        <td>El código es accesible por todas las clases</td>
+                    </tr>
+                    <tr>
+                        <td>private</td>
+                        <td>El código solo es accesible desde dentro de la clase</td>
+                    </tr>
+                    <tr>
+                        <td>default/package</td>
+                        <td>El código es accesible por todas las clases del mismo paquete</td>
+                    </tr>
+                    <tr>
+                        <td>protected</td>
+                        <td>Como package pero además accesible desde las subclases</td>
+                    </tr>
+                </table>
+                <br>
+                <HR width="20%"> 
+                <h5 style="text-align: left" id="Encapsulacion">5.3 Encapsulación de datos</h5>
+                <p>
+Las interacciones con los objetos se hacen mediante los métodos. Es decir, si queremos conocer información del estado del objeto deberemos de llamar a uno de sus métodos y no directamente a las propiedades.
+Esta encapsulación también nos permitiría actualizar los atributos del objeto. Esto nos aporta los siguientes beneficios:
+<br>
+                </p>
+                <ul>
+<li>Encapsular datos : ocultamos la implementación de propiedades del objeto ya que accederemos a través de los métodos del objeto, ocultando posible información sensible.</li>
+<li>Reutilización de Código : podemos tener diferentes instancias de un objeto de tal manera que esas diferentes instancias están compartiendo el mismo código.</li>
+                </ul>              
+                <p>
+                    Para implementar la encapsulación, lo recomendable es que los atributos estén declarados como privados, y se accedan a ellos mediante funciones publicas denominadas set y get.
+                    Siguiendo el ejemplo de persona, anteriormente le asignabamos a nuestro objeto miPersona una edad de 28 años porque el atributo edad era público, a diferencia de los otros. <br>
+                    
+                    Sin embargo, si ahora lo hacemos privado, nos dará un error al intentar asignarle un valor a una variable a la cual no tenemos acceso. Para ello crearemos 2 funciones llamadas getEdad y setEdad para obtener el valor
+                    y para actualizarlo correctamente.
+                </p>     
+                <pre>
+                public class Persona {
+  
+                  private int edad;
+
+                  public void setEdad ( int edad ) {
+                    this.edad = edad;
+                  }
+                  public int getEdad (){
+                    return this.edad;
+                  }
+
+                 public static void main(String[] args) {
+                 Persona miPersona = new Persona();
+                 miPersona.setEdad(28);
+                    }
+                </pre>
+
+               
+                <p>La palabra reservada this, es usada para referirnos al objeto actual que llamó a dicha función. Cuando se llama a setEdad, this se referirá al atributo edad del objeto miPersona que hemos creado y que llamó a dicho método. </p>
+ <HR width="20%"> 
+                <h5 style="text-align: left" id="Constructor">5.4 Constructores</h5>
+                <p>
+                    Los constructores son métodos especiales usados para la inicialización de los objetos. Al crearlos, en vez de llamar a los métodos sets, se usan los constructores para indicar que valores tendrá el objeto.
+                    <br>
+                    Siguiendo los ejemplos de la clase persona, un constructor sería como el siguiente:
+                    
+                </p>
+                <pre>
+                 public class Persona {
+                    public Persona(string nombre, string apellidos, int edad, string correo){
+                        this.nombre = nombre;
+                        this.apellidos = apellidos;
+                        this.edad = edad;
+                        this.email = correo;
+                        }
+                }
+                </pre>
+                <p>El nombre del constructor debe ser el mismo que el de la clase. Este será llamado automáticamente al crear el objeto</p>
+                <pre>
+                 public static void main(String[] args) {
+                 Persona miPersona = new Persona("Miguel","López García", 30, "miguelopezgarcia@gmail.com");
+                 }
+                </pre>
+                <HR width="20%"> 
+                <h5 style="text-align: left" id="Paquete">5.5 Paquete</h5>
+  <p>Un paquete es una forma de organizar elementos de software mediante un espacio de nombres. Así podremos afrontar desarrollos grandes de software facilitando la forma de encontrar o referirnos a un elemento.
+Podríamos entender el sistema de paquetes como si fuese un sistema de carpetas. De tal manera que colocaremos cada una de las clases (o ficheros) en un paquete (o directorio).
+Los paquetes se definen mediante el modficiador package seguido del nombre del paquete. El paquete lo definiremos en la primera línea de cada una de las clases.</p>
+  <HR width="20%"> 
+  <h5 style="text-align: left" id="Herencia">5.6 Herencia</h5>
+  <p>La herencia es una forma de estructurar el software. Mediante la herencia podemos indicar que una clase ( subclase o clase hija ) hereda de otra ( superclase o clase padre) . Es decir la clase extiende las capacidades (propiedades y métodos) que tenga y añade nuevas propiedades y acciones.
+Digamos que las nuevas clases especializan más aquellas clases de las que heredan al añadir nueva funcionalidad. Aunque también pueden reescribir el funcionamiento de dichos elementos.
+  En Java se usa la palabra extends para implementar la herencia. <br>
+  Volviendo al ejemplo de la clase persona anterior, podemos tener ahora dos clases que heredan de ella: alumno y profesor y cada uno tendrá unas características concretas.
+  </p>
+  <pre>
+            public class Alumno extends Persona {
+            
+            private int notaMedia;
+
+            public void presentarseExamen();
+
+
+            }   
+
+            public class Profesor extends Persona {
+
+            private int añosExperiencia;
+            
+            public void publicarNotas();
+            }
+
+
+  </pre>  
+  <p> La subclase, heredará todos los métodos y atributos de la clase padre, e implementará otros nuevos más específicos. De esta forma, tanto alumno como profesor, serán personas, y tendrán metodos como andar,comer o dormir y atributos
+      como el nombre y la edad, pero se diferenciarán ya que el alumno por ejemplo se presentará a exámenes y el profesor publicará las notas de los alumnos.<br>
+  Para acceder a los miembros de la superclase se usa la palabra reservada super. Es similar a this, pero referido a la clase padre.
+  </p>
+  
+  <pre>
+            public class Alumno extends Persona {
+            
+            public Alumno ( int notaMedia, string nombre, string apellidos, int edad, string correo) {
+                super(nombre,apellidos,edad,correo);
+                this.notaMedia = notaMedia;
+                }
+
+  </pre>
+  
+  <HR width="20%"> 
+  <h5 style="text-align: left" id="Polimorf">5.7 Polimorfismo</h5> 
+  <p>En programación orientada a objetos el polimorfismo es la capacidad que tiene un objeto de responder de maneras diferentes ante mismos mensajes envíados a objetos En Java es implementado mediante la sobrecarga de métodos, que nos permite tener un mismo método con diferentes firmas.
+  En función de los parámetros y los tipos de los mismos, el compilador decide a qué método se está llamando. De ésta manera podemos realizar diferentes tareas según los parámetros que le pasemos a la función.
+  <br>
+  Siguiendo con los ejemplos anteriores de alumno, profesor y persona, podríamos crear un método que nos imprima la información de la persona con diferentes funciones según si es alumno o profesor.</p>
+<HR width="20%"> 
+  <h5 style="text-align: left" id="Interfaz">5.8 Interfaz</h5>   
+<p>Un interfaz es una forma de establecer un contrato entre dos elementos. Un interfaz indica qué acciones son las que una determinada clase nos va a ofrecer cuando vayamos a utilizarla.
+
+    Cuando implementemos un interfaz (cuando lo usemos) deberemos de implementar todas las acciones (métodos) que este contenga.</p>
+<pre>
+            public class Persona 
+             {
+
+              public void imprimeInfo()
+               System.out.println("Mi nombre es : " + this.nombre);
+             }
+
+            public class Alumno extends Persona 
+              {
+              public string destinoErasmus
+
+              public void imprimeInfo()
+                System.out.println("Mi nombre es : " + this.nombre + " y mi nota media es : " + this.notaMedia);
+
+              public void imprimeInfo(boolean erasmus)
+                {
+                System.out.println("El alumno : " + this.nombre + "el año que viene se irá de Erasmus a " + this.destinoErasmus);
+                }
+              }
+            public static void main(String[] args) {
+                Alumno miAlumno = new Alumno(8, "Manuel", "Jimenez Garcia", 20,manueljg@gmail.com, Londres);
+                miAlumno.imprimeInfo(); // Imprime  Mi nombre es Manuel y mi nota media es 8
+                miAlumno.imprimeInfo(true); // Imprime El alumno Manuel el año que viene se irá de Erasmus a Londres
+            }
+
+</pre>
+<p>Mediante la misma llamada ( con diferentes parámetros ) tenemos dos respuestas diferentes. De la misma manera, podríamos tener otro método imprimeInfo en profesor con una salida diferente.
+De esta forma, podemos hacer nuestro código mucho más reutilizable y facil de mantener.</p>
+   <p>Aquí finaliza nuestro manual de Java. Si quieres seguir aprendiendo, puedes consultar la documentación accesible desde  <a href="externas.html">herramientas externas</a></p> 
+        
+        
+        
+        </div>
+        <script type="text/javascript" src="js/bootsrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    </body>
+</html>

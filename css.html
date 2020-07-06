@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aprende a programar jugando</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>LearnGaming</h1>
+        
+        </div>
+        
+        <div class="barra">
+             
+			<ul>
+				<li class="barra-primero"><a href="index.html">Inicio</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li><a href="desarrollo.html">En desarrollo...</a></li>
+			</ul>
+            
+            
+        </div>
+        <div class="barra-lateral">
+           
+                <div class="sidebar-header">
+                <h2>Menú</h2>
+                </div>
+         
+            
+            <div class="secciones">
+             <ul class="menu-lateral">
+                  <li class="externo"><input type="checkbox" id="lecciones"> <label for=lecciones>Lecciones</label>
+                  <ul class="interno">
+                   <li><a href="java.html">Java </a></li>
+                   <li><a href="c.html">C</a></li>
+                   <li><a href="html.html">HTML</a></li>
+                   <li><a href="css.html">CSS </a></li>
+                  </ul>
+                  </li>
+
+               <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Juegos</label>
+               <ul class="interno">
+                <li><a href="JuegoDungeon.html">Dungeon Code</a></li>
+
+                </ul>
+                </li>
+                <li class="externo"><input type="checkbox" id="herramientas"> <label for=juegos>Herramientas externas</label>
+                 <ul class="interno">
+                   <li><a href="externas.html">Páginas de Referencia </a></li>
+                    <li><a href="https://www.codingame.com/start">CodinGame </a></li>
+                   <li><a href="https://checkio.org/">Checkio </a></li>
+                    <li><a href="https://codecombat.com/">CodeCombat </a></li>
+                 </ul>
+                    <li class="externo"><input type="checkbox" id="descargas"> <label for=juegos>Descargas</label>
+                     <ul class="interno">
+                      <li><a href="descarga.html">Dungeon Code</a></li>
+                      </ul>
+            </ul> 
+         
+         
+        
+            
+           </div>  
+        </div>
+        <div class="contenido-principal">
+            <div class="indice">
+            <h1>Indice</h1>
+    
+            <ol class="lista-indice">
+            <li><a href=#Introduccion>Introduccion</a></li>
+            <li><a href=#Selectores>Selectores</a></li>
+            <li><a href=#ModeloCajas>Modelo de cajas</a></li>
+            <li><a href=#Posicionamiento>Posicionamiento</a></li>
+            </ol>
+                   
+            </div>
+          
+              <h2 style="text-align: left" id="Introduccion">1 Introduccion</h2>
+             <p>
+                 CSS (Cascading Style Sheets) es un lenguaje de hojas de estilos que es utilizado para controlar el aspecto que tienen las webs definidas con HTML.
+                 CSS nos permite separar el contenido de la Web, con la forma en que es presentado dicho contenido. Cuando creamos una página web
+                 , lo primero que haremos será utilizar el lenguaje HTML para marcar los contenidos, y una vez creados, utilizaremos CSS para definir el aspecto de cada
+                 elemento: color, tamaño y tipo de letra, margenes y muchas más posibilidades.
+                 
+                 
+                         </p>
+             <h5 style="text-align: left" id="Conceptos">1.1  Conceptos Básicos</h5>
+             <p>
+                 Hay unos términos básicos que nos sirven para definir las partes que componen los estilos CSS. En el siguiente esquema se muestran
+                 las partes que forman un estilo CSS
+             </p>
+              <img src="images/css reglas.gif" alt="ReglasCSS" style="padding: 10px"/>
+              <br/>      <br/>    
+              <ul>
+                  <li>Regla: cada estilo esta compuesto por una regla, que a su vez está compuesta por un selector y una declaración                      </li>
+                  <li>Selector: indica el elemnto o elementos de HTML a los que se le aplica la regla de estilo</li>
+                  <li>Declaracion: el bloque de declaración contiene una o más declaraciones que especifican los estilos a aplicar. Se componen de una propiedad y un valor asignado a dicha propiedad.</li>
+              
+              </ul>
+                 <HR width="20%"> 
+              <h5 style="text-align: left" id="Comentarios">1.2  Comentarios</h5>
+              <p>CSS permite incluir comentarios entre sus reglas. Los navegadores ignorarán el contenido de estos comentarios por completo. El comienzo de un comentario se indica mediante la secuencia /* y se cierra con la secuencia */</p>
+              <pre>
+               /* Esto es un comentario en CSS
+          
+
+               /* Esto es un comentario
+                   de varias lineas en CSS */
+              </pre>
+               <HR width="20%"> 
+               <h2 style="text-align: left" id="Selectores">2 Selectores</h2>
+             <p>
+              Los selectores son usados para encontrar el elemento HTMl al que le queremos aplicar el estilo. Existen varios tipos de selectores que vamos a mostrar con ejemplos
+              
+                 <HR width="20%"> 
+               <h5 style="text-align: left" id="Universal">2.1  Selector Universal</h5>
+               <p>Se usa para aplicar el mismo estilo a todos los elementos HTML. En el ejemplo a continuación se eliminan los margenes y se establece un fondo azul</p>
+               <pre>
+               * {
+                 margin: 0;
+                 padding: 0;
+                 background-color:blue;
+                 }            </pre>
+                  <HR width="20%"> 
+                <h5 style="text-align: left" id="SelectorEtiqueta">2.2  Selector de etiqueta</h5>
+                <p>Selecciona todos los elementos HTML de la página que coinciden con la etiqueta del valor del selector. Se puede apliar una regla a un solo tipo de elemento, o a varios a la vez como veremos a continuación
+                donde cambiaremos el color del texto y la alineación para primero los elementos tipo p que existan, y despues para los elementos p,h1 y h2 simultaneamente</p>
+                <pre>
+              p {
+                text-align: center;
+                color: red;
+                } 
+
+     h1, h2, p  {
+               text-align: center;
+               color: red;
+                }
+
+
+                </pre>
+                   <HR width="20%"> 
+                <h5 style="text-align: left" id="SelectorClases">2.3  Selector de clase</h5>
+                <p>Con este selector , podemos seleccionar elementos HTML por su atributo de clase. Esto podemos usarlo si queremos por ejemplo que todos los párrafos tengan un estilo concreto, pero el parrafo superior tenga un estilo diferente
+                Supongamos que tenemos una serie de párrafos y al primero de ellos se le ha asignado la clase "superior"
+                </p>
+                <pre>
+       .superior {
+                 text-align: center;
+                 font-weight: bold;
+                 font-size: 18px;
+                 }  
+             
+              p  {
+                 text-align: left;
+                 font-size: 12px;
+                 }
+
+                </pre>
+                <p>De esta manera, podemos tener un estilo genérico para los párrafos y con el selector de clase, cambiamos el estilo de un párrafo concreto. Siempre se aplicará la regla más específica. En nuestro caso la alineación de texto y el tamaño de 20 pixeles 
+                de la relga asignada a la clase superior, tendrá prioridad sobre las definidas para los párrafos en general</p>
+                   <HR width="20%"> 
+        <h5 style="text-align: left" id="SelectorID">2.4  Selector de id</h5>
+        <p>
+            Selector muy parecido al de clase, con la diferencia de que el id es único, por lo que estaremos aplicando al regla a un solo elemento HTML. En este caso se usa el símbolo #
+        </p>
+        <pre>
+            
+      #parrafo1 {
+                font-weight: bold;
+                font-size: 18px;
+                }
+        </pre>
+        
+        Para ver más ejemplos de selectores y selectores más avanzados, puedes consultar la documentación de las herramientas externas.
+           <HR width="20%"> 
+           <h2 style="text-align: left" id="ModeloCajas">3. Modelo de cajas</h2>
+           <p>Todos los elementos de HTML pueden ser considerados como cajas. El modelo de cajas de CSS, es el comportamiento que hace que todos los elementos se representen como cajas rectangulares.
+           De esta forma, cada vez que definimos un elemento HTML, se crea automaticamente ua caja invisible a su alrededor que envuelve el contenido.</p>
+           <img src="images/modelocajas.gif" alt="modeloCajas" style="margin-right: 200px"/>
+           <img src="images/modelocajas2.gif" alt="modeloCajas" style="padding:20px; margin-top: 10px"/>
+           
+           <p>
+                Las partes que componen cada caja y su orden de visualización desde el punto de vista del usuario son las siguientes:
+           </p>
+           <ul>
+               
+
+               <li>Contenido (content): se trata del contenido HTML del elemento (las palabras de un párrafo, una imagen, el texto de una lista de elementos, etc.)</li>
+               <li>Relleno (padding): espacio libre opcional existente entre el contenido y el borde.</li>
+               <li>Borde (border): línea que encierra completamente el contenido y su relleno.</li>
+               <li>Imagen de fondo (background image): imagen que se muestra por detrás del contenido y el espacio de relleno.</li>
+               <li>Color de fondo (background color): color que se muestra por detrás del contenido y el espacio de relleno.</li>
+               <li>Margen (margin): separación opcional existente entre la caja y el resto de cajas adyacentes.</li>
+           </ul>
+              <HR width="20%"> 
+          <h2 style="text-align: left" id="Posicionamiento">4. Posicionamiento</h2>
+          <p>Cuando los navegadores descargan el contenido de HTML y CSS, realizan un procesamiento complejo para mostrar correctamente las páginas. Para cumplir
+          con el modelo de cajas. En este procesamiento se tienen en cuenta los siguientes factores:
+           </p>
+           <ul>
+               <li>Las propiedades height y width asignadas (en caso de existir)</li>
+               <li>El tipo de elemento HTML (bloque o linea)</li>
+               <li>Posicionamiento de la caja : normal, relativo,absoluto fijo o flotante</li>
+               <li>Relaciones con otros elementos HTML</li>
+               <li>Otra información adicional, como puede ser el tamaño por defecto de imágenes o la ventana del navegador</li>              
+           </ul>
+           <p>Vamos a centrarnos en este capítulo en el tipo de elemento y en los diversos tipos de posicionamiento</p>
+          <br>
+           <h5 style="text-align: left" id="TiposElemento">4.1 Tipos de elemento</h5>
+           <p>
+               Los elementos en bloque, siempre empiezan en una nueva linea y ocupan todo el espacio disponible hasta el final de la misma. En cambio,
+               los elementos en linea ,  no tienen porque empezar en una nueva linea, y solo tomarán el espacio que ocupe su contenido. Esto modifica la forma en que el navegador nos muestra la página Web.
+           </p>
+           <pre>
+Los elementos en línea definidos por HTML son: a, abbr, acronym, b, basefont, bdo, big, br, cite, code, dfn, em, font, i, img, input, kbd, label,
+ q, s, samp, select, small, span, strike, strong, sub, sup, textarea, tt, u, var.
+
+Los elementos de bloque definidos por HTML son: address, blockquote, center, dir, div, dl, fieldset, form, h1, h2, h3, h4, h5, h6, hr, isindex,
+ menu, noframes, noscript, ol, p, pre, table, ul.
+
+           </pre>
+           <p>
+               Estos son los valores por defecto, pero con la propiedad display de CSS, podemos asignar los valores inline o block a elementos que no lo tienen asignado por defecto. Para más información, consulta las herramientas externas
+           </p>
+              <HR width="20%"> 
+           <h5 style="text-align: left" id="PosNormal">4.2 Posicionamiento estático</h5>
+           <p>El posicionamiento estático es el usado por defecto por los navegadores para mostrar los elementos de las páginas. Es el más simple ya que solo
+               se basa en si el elemento es de bloque o en línea y las propiedades de width y height. <br>
+           Este posicionamiento no se ve afectado por las propiedades top,left,right y bottom.
+           </p>
+           
+     
+ 
+           <h5 style="text-align: left" id="PosRelativo">4.2 Posicionamiento relativo</h5>
+           <p>El posicionamiento relativo se considera una variación del posicionamiento normal o estático. Lo que hace este tipo de posicionamiento es colocar el elemento desplazado con respecto 
+           a su posición original. Para ello se usan las propiedades top,left,right y bottom. Estas propiedades, hacen que el elemento se aleje de su posición normal de forma que
+           la propiedad indica donde quedaría la posición original. Por ejemplo, si usamos la propiedad left, estaremos moviendo hacia la derecha nuestro elemento
+           <br>
+           Vamos a verlo con un ejemplo en el que usaremos la propiedad left con un valor de 50px a una imagen de la siguiente forma: &lt;img src="images/css.png alt="css" style="position: relative;left:100px"/&gt;
+               </p>
+               <img src="images/css.png" alt=""/>
+               <br>
+               <img src="images/css.png" alt="css" style="position: relative;left:100px"/>
+            
+               <br>
+           <h5 style="text-align: left" id="PosAbsoluto">4.2 Posicionamiento absoluto</h5>
+           <p>El posicionamiento absoluto se usa para establecer la posicion exacta de un elemento. Se indica también con  las propiedades
+               top,right,left y bottom, pero es más complejo que el anterior, ya que en este caso depende del elemento que lo contiene.<br>
+           Para ilustrarlo, vamos a mostrar un ejemplo en el que creamos un div( un contenedor genérico para secciones) y vamos a mostrar su borde asignándole 200 de altura y todo el ancho de la página.
+           Dentro vamos a colocar la imagen de css de nuevo, y vamos a posicionarla con el posicionamiento absoluto, indicándole la posición relativa al contenedor.</p>
+           <pre>
+           &lt;div style="border:solid 2px; height:200px;position:relative"&gt;
+            &lt;img src="images/css.png" style="position:absolute;left:100px;top:50px"/&gt;
+           &lt;/div&gt;
+
+           </pre>
+           
+           
+           <div style="border: solid 2px; height: 200px;position: relative">
+               <img src="images/css.png" alt="" style="position: absolute; left: 100px;top: 50px"/>
+           </div>
+           
+           <br>
+           <h5 style="text-align: left" id="PosFijo">4.2 Posicionamiento fijo</h5>
+           <p>
+             El posicionamiento fijo es un caso particular del posicionamiento absoluto, en el cual se posiciona el elemento de forma relativa con respecto al viewport (area de la ventana con contenido web visible.
+             Una de las principales características es que la posición de la caja es completamente fija, hasta el punto en que aunque deslicemos la página hacia arriba o hacia abajo, el elemento seguirá
+             apareciendo en la posición que hemos especificado.
+             <br>
+              Para más información y ejemplos del posicionamiento fijo, consulta las herramientas externas.
+           </p>
+        
+           <br>
+           <h5 style="text-align: left" id="PosFlotante">4.2 Posicionamiento flotante</h5>
+           <p>El posicionamiento flotante es uno de los más usados y también el más complejo de entender. Este posicionamiento convierte los elementos en cajas flotantes que se pueden desplazar
+           hasta la zona más izquierda o derecha del elemento que lo contiene. Al usar el posicionamiento flotante, el elemento deja de pertecener al flujo normal de la página, por lo que
+           el resto de elementos ocuparán su lugar.
+           <br>
+           Tenemos un ejemplo con dos imágenes inicialmente con el posicionamiento normal. Si hacemos que la primera imagen flote hacia la derecha, la segunda foto ocupará su linea en la primera fila
+           </p>
+           <div style="border: solid 2px;height:270px">
+           <img src="images/css.png" alt="" style=""/>
+           <br>
+           <img src="images/css.png" alt="" style=""/>
+                    </div>
+           <pre>
+
+           &lt;img src="images/css.png" style="float:right"/&gt;
+           &lt;img src="images/css.png"&gt;
+           </pre>
+
+            <div style="border: solid 2px;height:135px">
+           <img src="images/css.png" alt="" style="float:right"/>
+
+           <img src="images/css.png" alt="" style=""/>
+           <br> 
+         </div>
+          
+           <p>
+               <br>
+               Podemos incluir más imágenes y hacer que todas floten hacia la izquierda, de forma que estén todas en línea.               
+           </p>
+           <pre>
+           &lt;img src="images/css.png" style="float:left"/&gt;
+           &lt;img src="images/css.png" style="float:left"/&gt;
+           &lt;img src="images/css.png" style="float:left"/&gt;
+           &lt;img src="images/css.png" style="float:left"/&gt;
+           &lt;img src="images/css.png" style="float:left"/&gt;
+           </pre>
+            <div style="border: solid 2px;height:135px">
+           <img src="images/css.png" alt="" style="float:left"/>
+           <img src="images/css.png" alt="" style="float:left"/>
+           <img src="images/css.png" alt="" style="float:left"/>
+           <img src="images/css.png" alt="" style="float:left"/>
+           <img src="images/css.png" alt="" style="float:left"/>
+           
+           <p><br>
+           </p>
+           
+           
+           <br><br><br><br><br>
+           
+           
+            <HR width="20%"> 
+            <p>Aquí finaliza nuestro manual de CSS. Si quieres seguir aprendiendo, puedes consultar la documentación accesible desde  <a href="externas.html">herramientas externas</a></p> 
+        </div>
+
+        <script type="text/javascript" src="js/bootsrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    </body>
+</html>

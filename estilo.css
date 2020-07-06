@@ -1,0 +1,142 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05-feb-2019, 11:22:04
+    Author     : karly
+*/
+html, body {
+        height: 100%;
+        margin: 0px;
+    }
+.container-fluid {
+	width: 100%;
+	height: 113px;
+	color: #fff;
+	background: url('images/header_background.gif') repeat-x 0px 0px;
+	overflow: hidden;
+        text-align: center;
+}
+.barra {
+	margin-bottom: 1px;
+        background: url('images/menu_background.gif') repeat-x 0px 0px;
+	width: 100%;
+	height: 30px;
+}
+.barra ul{
+
+        padding: 0;
+        width: 100%;
+	height: 30px;
+	list-style-type: none;
+	overflow: hidden; 
+        display:inline
+    
+    
+}
+.barra li {
+	margin-right: 1px;
+	width: 190px;
+        /*width:250px;*/
+	height: 30px;
+	float: left;
+	
+	overflow: hidden;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+}
+.barra a {
+	padding-top: 8px;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+}
+
+.barra-lateral {
+	width: 210px;
+        float:left;
+	color: #8989b6;
+        border-style: solid;
+        height: 100%;
+}
+.barra-lateral a {
+	color: #8989b6;
+}
+.barra-lateral a:hover {
+	color: #75759c;
+}
+
+.cabecera-barra-lateral {
+	margin-bottom: 2px;
+	width: 166px;
+	height: 35px;
+	background-color: #9980CC;
+	overflow: hidden;
+}
+.cabecera-barra-lateral h2 {
+	margin-top: 6px;
+	margin-left: 5px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.contenido-principal {
+        margin-top: 20px;
+	margin-right: 2px;
+        margin-left :10px;
+	width: 85%;
+	text-align: left;
+	float: left;
+}
+.contenido-principal .h_divider {
+	margin-bottom: 2px;
+	height: 1px;
+	background-color: #c2c2cd;
+	overflow: hidden;
+}
+.interno{
+    display: none;
+
+}
+.externo{
+    font-weight: bold;
+    font-size: 20px;
+    
+    
+}
+
+.externo input:checked ~ ul{
+    display:block;
+
+
+}
+li a:hover{
+    color:#4c3380
+}
+.sidebar-header{
+        margin-bottom: 2px;
+	width: 204px;
+	height: 40px;
+	background-color: #9e9ec3;
+	overflow:hidden;
+        border-style: solid;
+    
+    
+}
+.sidebar-header{
+    text-align: left;
+    
+}
+.indice{
+    float:right;
+    border-style: solid;
+}
+.lista-indice{
+    text-align: left;
+}
+p{
+    text-aling:left;
+}

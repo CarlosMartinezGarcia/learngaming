@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aprende a programar jugando</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>LearnGaming</h1>
+        
+        </div>
+        
+        <div class="barra">
+             
+			<ul>
+				<li class="barra-primero"><a href="index.html">Inicio</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li><a href="desarrollo.html">En desarrollo...</a></li>
+			</ul>
+            
+            
+        </div>
+        <div class="barra-lateral">
+           
+                <div class="sidebar-header">
+                <h2>Menú</h2>
+                </div>
+         
+            
+            <div class="secciones">
+             <ul class="menu-lateral">
+                  <li class="externo"><input type="checkbox" id="lecciones"> <label for=lecciones>Lecciones</label>
+                  <ul class="interno">
+                   <li><a href="java.html">Java </a></li>
+                   <li><a href="c.html">C</a></li>
+                   <li><a href="html.html">HTML</a></li>
+                   <li><a href="css.html">CSS </a></li>
+                  </ul>
+                  </li>
+
+               <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Juegos</label>
+               <ul class="interno">
+                <li><a href="JuegoDungeon.html">Dungeon Code</a></li>
+
+                </ul>
+                </li>
+                <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Herramientas externas</label>
+                 <ul class="interno">
+                   <li><a href="externas.html">Páginas de Referencia </a></li>
+                    <li><a href="https://www.codingame.com/start">CodinGame </a></li>
+                   <li><a href="https://checkio.org/">Checkio </a></li>
+                    <li><a href="https://codecombat.com/">CodeCombat </a></li>
+                 </ul>
+                    <li class="externo"><input type="checkbox" id="descargas"> <label for=juegos>Descargas</label>
+                     <ul class="interno">
+                      <li><a href="descarga.html">Dungeon Code</a></li>
+                      </ul>
+            </ul> 
+         
+         
+        
+            
+           </div>  
+        </div>
+        <div class="contenido-principal">
+            <div class="indice">
+                <h1>Indice</h1>
+    
+            <ol class="lista-indice">
+            <li><a href=#Introduccion>Introduccion</a></li>
+             <li><a href=#Estructura>Estructura general de un programa C</a></li>
+             <li><a href=#Tipos>Tipos de datos</a></li>
+                <li><a href=#EstructurasControl>Estructuras de control</a></li>   
+                  <li><a href=#Punteros>Punteros</a></li>   
+                
+                
+            </ol>
+                
+                
+                      </div>  
+    
+             <h2 style="text-align: left" id="Introduccion"> 1. Introduccion</h2>
+             <p>
+                 C es un lenguaje de programación de propósito general que ofrece economía sintáctica, control de flujo, estructuras sencillas y un buen conjunto de operadores. Es un lenguaje de nivel medio y no está 
+                 especializado en ningún tipo de aplicación. Esto lo hace un lenguaje versátil y potente, con un campo de aplicación ilimitado y, sobre todo, se puede aprender rápidamente. En poco tiempo, un programador puede utilizar la totalidad del lenguaje.
+                 El lenguaje C es un lenguaje compilado. Existen dos tipos de lenguaje: interpretados y compilados. Los interpretados son aquellos que necesitan del código fuente para funcionar (por ejemplo, Basic). Los compilados, convierten 
+                 el código fuente en un fichero objeto y éste en un fichero ejecutable. Este es el caso del lenguaje C.
+                         </p>
+                 <img src="images/img3.gif" alt="Compilacion"/>
+                 <p>
+                     Los programas C se escriben con la ayuda de un editor de textos del mismo modo que cualquier texto corriente. Estos ficheros se conocen como ficheros fuente. El programa compilador toma como entrada el código fuente del programa, y da
+                     como salida un fichero que puede ser ejecutado por el ordenador directamente. Una vez compilado, el programa ejecutable es autónomo, y ya no es necesario disponer del programa original ni del compilador para ejecutarlo.
+                     
+                     
+                 </p>
+      <h2 style="text-align: left" id="Estructura">2. Estructura general de un programa en C</h2> 
+   <HR width="20%"> 
+   <p>
+       Una función en C es un grupo de instrucciones que realizan una o más acciones. Asimismo, un programa contendrá una serie de directivas #include que permitirán incluir en el mismo archivos de cabecera que a su vez constarán de funciones y datos predefinidos.
+   
+   
+   </p>
+       <img src="images/estrcutura.png" alt="Estructura"/>
+       
+  <h5 style="text-align: left" id="Estructura">2.1 Directivas del preprocesador</h5> 
+  <p>El preprocesador en un programa C se puede considerar como un editor de texto inteligente que consta de directivas (instrucciones al compilador antes de que se compile el programa principal). Las dos directivas más usuales son #include y #define.
+      Todas las directivas del preprocesador comienzan con la almoahdilla (#)que le indica al mismo que lea dichas directivas antes de compilar. <strong>La directiva include</strong> indica al compilador que lea el archivo y lo inserte. Estos archivos
+      denominados como archivos de cabecera tienen como extension .h como por ejemplo stdio.h y stdlib.h <br>
+    La directiva #define indica al preprocesador que defina un ítem de datos u operación para el programa C. Por ejemplo, la directiva
+    #define TAM_LINEA 65
+    sustituirá TAM_LINEA por el valor 65 cada vez que aparezca en el programa
+  </p>
+       
+   <h5 style="text-align: left" id="Declaraciones">2.2 Declaraciones globales</h5> 
+   <HR width="20%"> 
+   <p>
+       Las declaraciones globales indican al compilador las funciones definidas por el usuario o las variables declaradas que serán comunes a todo el programa. Se situán justo antes de la función main()
+       Las declaraciones de funciones se denominan prototipo.  </p>
+       <img src="images/declaraciones.png" alt="Declaraciones"/>
+       <h5 style="text-align: left" id="main">2.3 Funcion main()</h5> 
+   <HR width="20%"> 
+   <pre>
+       Cada programa en C debe tener una función main() que es el punto de entrada al programa. 
+    int main()
+    {
+    ...              bloque de sentencias
+    }
+   </pre>
+   <p> En un programa corto, el programa completo puede incluirse totalmente en la función main(). En programa largo, será necesario hacer llamadas a funciones propias definidas por el usuarioprácticamente de llamadas a las funciones definidas por el usuario.
+   </p>
+           
+   <pre>
+    int main()   
+    {
+    obtenerSaldo();
+    ingresar(100);
+    }
+   </pre>        
+   <h5 style="text-align: left" id="Funciones">2.4 Funciones definidas por el usuario</h5> 
+   <HR width="20%">            
+   <p>
+       Un programa en C estará compuesto por una colección de funciones. Las funciones, tienen a su vez varias sentencias que completan una tarea concreta. Las funciones definidas por el usuario se invocan por
+       su nombre y se le pasan los parametros opciones que pueda tener. Entonces se ejecuta el código y se devuelve a la función que la invocó. 
+       <br>
+       <br>
+       La <strong>declaración</strong> de la función indica al compilador el nombre por el cual será invocado y los posibles parámetros pasables a la función
+ </p>        
+   
+   <pre>
+       tipo_retorno nombre_función(lista_de_parámetros) principio de la función
+        {
+        sentencias                     cuerpo de la función
+        return;                        retorno de la función
+        }                              fin de la función
+
+        tipo_retorno                   tipo de valor, o void, devuelto por la función
+        lista_de_parámetros            lista de parámetros, o void, pasados a la función.
+
+
+    Por ejemplo con la función ingresar con la que añadimos un importe a nuestra cuenta corriente
+        void ingresar(int *saldoCuenta, int ingreso)
+         {
+         *saldoCuenta += ingreso;
+         }
+       </pre>
+    <h5 style="text-align: left" id="Comentarios">2.5 Comentarios</h5> 
+   <HR width="20%"> 
+   <p>
+       Un comentario es información para documentar un archivo, de forma que no sea ignorado por el compilador y que sirva para el usuario que lee el fichero. Se considera buena práctica comentar 
+       su código fuente para que sea facil de leer sobre todo con el paso del tiempo. 
+       
+       Los comentarios empiezan con la secuencia de caracteres /* y terminan con */ como veremos en los siguientes ejemplos.
+          </p>
+   <pre>
+       /* Esto
+       es
+       un comentario
+       multilinea
+       */
+       
+       /*Tambien puede usarse para comentarios en una sola linea*/
+      
+       printf("El saldo actual es %d\n" obtenerSaldo(cuenta)); /* También puedo ir en la misma linea que el código */
+
+       Por último, se permite el uso de comentarios de una sola linea con la secuencia //.
+
+       //Esto también es un comentario válido
+ 
+   </pre>
+          
+    <h2 style="text-align: left" id="Tipos"> 3. Tipos de datos</h5>
+     <p>
+       C nos ofrece tres tipos de datos básicos, aunque nos permite crear nuestros propios tipos de datos. Estos tipos básicos son:       
+     </p>
+     <ul>
+         <li>enteros</li>
+         <li>numeros reales o de coma flotante</li>
+         <li>caracteres</li>
+      
+     </ul>
+        <img src="images/tipos.png" alt=""/>
+         <h5 style="text-align: left" id="Enteros">3.1 Enteros</h5> 
+   <HR width="20%">
+   <p>
+       El tipo de dato más familiar es el tipo entero y se define con la palabra int. Los modificadores unsigned, short y long nos permiten variar el rango de los enteros.
+   </p>
+     <h5 style="text-align: left" id="Float">3.2 Float</h5> 
+   <HR width="20%">
+   <p>
+       Los tipos de datos de coma flotante representan numeros reales que contienen una coma (punto). Se declaran con la palabra float o double ( mayor rango de valores)
+   </p>
+     <h5 style="text-align: left" id="Char">3.3 Caracteres</h5> 
+   <HR width="20%">
+   <p>
+       Un cáracter es cualquier elemento de un alfabeto. La mayoría de computadores utilizan el conjunto de caracteres ASCII. C procesa datos carácter utilizando el tipo de dato char. 
+     </p>
+   <pre>
+    char caracter = 'A';
+   </pre>
+     <p>
+         Internamente, los carácteres se almacenan como números que corresponden al código ASCII (0-255).
+         Como se verá más adelante, podremos crear arrays (tablas) de carácteres, formando cadenas.
+     </p>
+       <h5 style="text-align: left" id="Bool">3.4 Tipo Lógico</h5> 
+   <HR width="20%">
+   <p>
+       El tipo bool, nos permite asignar a una variable solo dos posibles valores: true o false. Es muy útil para las estrcuturas de control ( if,while...). Se basa en el tipo int,
+       interpretando como verdadero todo valor distinto de 0 , y como falso el valor 0. 
+   </p>
+       <h5 style="text-align: left" id="Constantes">3.5 Constantes</h5> 
+   <HR width="20%">
+   <p>
+       Las constantes simbólicas asginan valores mediante la directiva #define como por ejemplo #define PI 3.1415. El compilador, cada vez que encuentra ocurrencias con la palabra PI, la sustituye por el valor 3.1415
+   </p>
+       <h5 style="text-align: left" id="Variables">3.6 Variables</h5> 
+   <HR width="20%">
+   <p>
+      En C, una variable es una posición con nombre en memoria donde se le almacena un valor de un cierto tipo.  Estas pueden almacenar cualquier tipo de dato 
+      y a diferencia de las constantes, si que pueden ser modificadas a lo largo de la ejecución del código. El procedimiento para definir (crear) una variable es escribir el tipo de dato, el nombre de la varibale y el valor que se le asigna (opcional)
+      </p>
+   <pre>
+       int x;
+       char letra;
+   </pre>
+       <h5 style="text-align: left" id="Variables">3.6.1 Declaración</h5> 
+       <p>
+           Una declaración de una variable es una sentencia que proporciona información de la varibale al compilador de C.
+       </p>
+       <pre>
+           <strong>tipo variable</strong>
+           <strong>tipo</strong> es el nombre de un tipo
+           <strong>variable</strong> es el identificador (nombre)
+
+           <strong>Ejemplo</strong>
+           long dNumero;
+           float HorasPorSemana;
+           float NotaMedia;
+           short DiaSemana;
+        </pre>
+       <p>
+           Es necesario declarar las variables antes de utilizarlas En C, el ámbito de las variables es el bloque en el que están declaradas.
+       </p>
+       <h5 style="text-align: left" id="Variables">3.6.2 Inicialización</h5> 
+       <p>
+           La inicialización se produce cuando se le asigna un valor a una variable. Esto se puede realizar cuando se declaran, o despues de la declaración.
+           
+       </p>
+       <pre>
+          <strong>Declaración con valor inicial</strong> 
+          char respuesta = 'S';
+          int contador = 1; 
+          <strong>Declaración e inicialización por separado</strong> 
+          char letra;
+          letra = 'X';
+        </pre>
+   
+        <h5 style="text-align: left" id="Variables">Declaración vs definición</h5> 
+       <p>
+           La diferencia entre estos terminos es bastante pequeña y en ocasiones lleva a confusión. Una declaración introduce una variable con un nombre y un tipo asociado, de forma que el programa la pueda reconocer.
+           En cambio, una definición es una declaración que asigna al mismo tiempo memoria a la variable 
+       </p>
+       
+       
+          <h5 style="text-align: left" id="Duracion">3.7 Duracion de una variable</h5> 
+          <p>Las variables, por lo general, tienen la duración asociada al bloque en el que están definidas.
+          Existe una alternativa para evitar este comportamiento y son las variables estáticas. Estas se definen
+          con la especificación static.  Las variables estáticas se crean al principio del programa
+          y no se destruyen hasta que el programa finaliza.
+          
+          </p>
+          <HR width="20%">
+   
+     <h2 style="text-align: left" id="EstructurasControl"> 4. Estructuras de Control</h5>
+     <p>
+         
+        Las estructuras de control nos permiten modificar el flujo de ejecución de las instrucciones de un programa. Estas 
+        deben tener un solo punto de entrada y salida. Las podemos clasificar como estructuras de control de selección o iterativas. <br>
+        Las de selección ejecutan un bloque de instrucciones u otro, en función de si se cumple o no una condición. Dentro de este grupo se encuentran las sentencias if y switch. <br>
+        Las estructuras de control iterativas, inician o repiten un bloque de instrucciones mientras se siga cumpliendo la condición. De este tipo tenemos las sentencias While, For y Do While
+        
+     </p>
+      <h5 style="text-align: left" id="If">4.1 If</h5> 
+      <p>La sentencia if permite redirigir el programa evaluando una concición simple, sea verdadera o falsa.
+      Si la condición es verdadera, se ejecuta el primer bloque de código, y en caso contrario se ejecuta el segundo.
+      La estructura general de la sentencia if es la siguiente:</p> 
+      <pre>
+            <strong>if</strong> (condición)
+            {
+            código en caso de true
+            }
+            <strong>else</strong>
+            {
+            código en caso de false
+            }
+      </pre>
+      <p>El bloque else es opcional, pudiendo no ejecutar nada en caso de que no se cumpla la condición. Podemos también 
+      tener múltiples sentencias if anidadas. La estructura sería algo parecido a lo siguiente: </p>
+  <pre>
+            <strong>if</strong> (condición)
+            {
+            código en caso de true
+            }
+                <strong>if</strong> (2a condición)
+                    {
+                    código en caso de true 2a condición
+                    }
+            }
+            <strong>else</strong>
+            {
+            código en caso de false
+            }
+      </pre>
+      
+      
+      <HR width="20%">     
+      <h5 style="text-align: left" id="Switch">4.2 Switch</h5> 
+      <p>Esta sentencia permite ejecutar un bloque de código de entre varias posibilidades en función
+      del valor de la expresión. Para ello se evalúa el valor de la expresión y se recorren los casos hasta que la primera coincidencia.
+      Tras la primera coincidencia, se ejecuta el bloque de código correspondiente, y se sale de la instrucción switch. Si no se encuentra
+      ninguna coincidencia se ejecuta el código especificado en la etiqueta default. 
+      La estructura general es la siguiente:</p>
+      
+      <pre>
+            <strong>switch</strong> (expresión){
+
+                <strong>case</strong> expresión1:
+                                  código1;
+                                  <strong>break</strong>;
+
+                <strong>case</strong> expresión2:
+                                  código2;
+                                  <strong>break</strong>;
+                <strong>case</strong> expresión3:
+                                  código3;
+                                  <strong>break</strong>;
+                <strong>default:</strong>
+                           código default;  
+                                  <strong>break</strong>;
+      </pre>
+      <p> Podemos ver un ejemplo concreto con los días del mes asignados a una variable entera diasMes y una variable mes introducida por linea de comandos</p>
+      <pre>
+           switch (mes)
+             {
+             case 2:
+                diasMes = 28;
+                break;
+             case 4:
+             case 6:
+             case 9:
+             case 11:
+                diasMes = 30;
+                break;
+             default:
+                diasMes = 31;
+                break;
+              }
+
+      </pre>
+      <p>Se puede aplicar un mismo bloque de código a múltiples casos de la forma especificada en el ejemplo. El caso default
+      se utiliza para detectar casos no válidos o erróneos, ó como en el caso anterior para disminuir el número de lineas de código.    
+      </p>
+      <HR width="20%">
+   
+    <h5 style="text-align: left" id="While">4.3 While</h5> 
+    <p>A veces es necesario ejecutar el mismo bloque de código varias veces. Para eso usamos las sentencias While,Do While y For.
+    El bucle while tiene una estrcutura muy sencilla en la que mientras se cumpla la condición se ejecuta el código una y otra vez. 
+    Por tanto, es muy importante que en el bloque de código se modifique el valor asociado a la condición para no caer en un bucle infinito. 
+     </p>
+     <pre>
+            <strong>while</strong> (condición)
+                {
+                bloque de código;
+                }
+     </pre>
+   <HR width="20%">
+       <h5 style="text-align: left" id="For">4.4 Do While</h5> 
+       <p>
+           Si la condición del while no se cumple, podría no llegar a ejecutarse nunca. La sentencia Do While se diferencia
+           del While, en que se ejecuta siempre como mínimo una vez. Se ejecuta el bloque de código, y se comprueba la condición posteriormente.
+       </p>
+       
+       <pre>
+       
+             <strong>do</strong> 
+                {
+                bloque de código;
+                }
+             <strong>while</strong> ( expresión );
+       </pre>
+       
+   <HR width="20%">
+    <h5 style="text-align: left" id="For">4.5 For</h5> 
+    <p>
+      La sintaxis del bucle for es:   </p>
+    <pre>
+              <strong>for</strong> ( inicialización; expresión; incremento)
+                {
+                bloque
+                }
+    </pre>
+    <p>El bucle for se puede considerar como una variación del bucle while en el que sabemos el número de iteraciones que hay que realizar.
+    Es bastante flexible ya que pueden omitirse cualquiera de los tres campos. La primera expresión suele ser la inicialización de las variables. La segunda expresión es la que contiene una expresión booleana, que determinará el fin del bucle. La tercera expresión, contiene las instrucciones a ejecutar al finalizar
+    cada iteración del bucle y que harán que este acabe terminando ( la expresión 2 dejará de ser cierta en algún momento o estaremos en un bucle infinito)</p>
+   <HR width="20%">
+   
+    <h2 style="text-align: left" id="Punteros"> 5. Punteros</h5>
+    <p>Los punteros son uno de los aspectos más potentes e importantes del lenguaje C, pero también de los más complejos. Antes de explicar en que consisten hay que hablar sobre la memoria del ordenador.
+    Cada vez que declaramos una variable, ésta estará ocupando cierto espacio en la memoria de nuestro ordenador. Para conocer el valor de dicha variable almacenada en memoria, nuestro ordenador necesitará tres datos: como está codificada la variable, que tamaño tiene y en que zona de memoria está guardada. Según el tipo tendremos un tamaño distinto ( 4 octetos para int y 8 octetos para float por ejemplo. Ver función sizeof())
+    <br>
+    Un puntero nos apunta a una variable, en concreto a la dirección de memoria que ésta ocupa. Además tendrá un tipo asociado que será el de la variable a la que apunta. Para declarar un puntero se usa el caracter '*'. Por ejemplo
+    </p>
+    <pre>
+             int * punteroEntero = NULL;
+             float * punteroFloat = NULL;
+
+    </pre>
+    <p>
+        Ambas variables almacenarán la dirección de una varibale de tipo entero y float respectivamente. Asignarles el valor NULL en la inicialización es bastante importante, ya que incialmente tendrá un valor desconocido y podríamos estar accediendo a zonas de memoria que no deseamos provocando errores dificiles de detectar.
+    </p>
+    <HR width="20%">
+    <h5 style="text-align: left" >5.1 Operadores de punteros</h5> 
+    <p>
+        Para los punteros usamos dos tipos de operadores, '&' y '*'
+   </p>
+   <ul>
+       <li> &: operador de dirección. Se aplica como prefijo a cualquier variable y nos devuelve la dirección en la que se encuenta</li>
+       <li> *: operador de contenido. Se aplica como prefijo a un puntero para obtener el valor contenido en la dirección de memoria </li>
+       
+   </ul>
+   <pre>
+             int cinco = 5;
+             int *pCinco = &cinco;
+               
+             printf("La varibale cinco vale %d y se encuentra en la direccion de memoria %p\n", *pCinco, pCinco);
+
+   </pre>
+   <p>Alternativamente se podría haber usado cinco en vez de *pCinco y &cinco en vez de pCinco ya que tienen el mismo efecto</p>
+    
+   <HR width="20%">
+   <h5 style="text-align: left" >5.2 Uso de punteros en funciones</h5> 
+    <p>
+  Una de las limitaciones que tenemos en C, es que al ser las variables locales ( por lo general ), cuando hacemos una modificación en una variable dentro de una función, ésta sólo se verá modificada en el ámbito de la función, y al volver de ella volverá al valor que tenía anteriormente.
+   </p>
+   
+   
+   <pre>
+            {
+             int saldoBanco = 200;
+             int aumento = 500;
+             aumentarSaldo(saldoBanco, aumento);
+             printf("El saldo acutal es: %d\n", saldoBanco); // Vale 200 de nuevo
+            }
+
+                
+            void aumentarSaldo(int saldo, int aumento)
+            {
+            saldo += aumento;
+            printf("El saldo al aumentar es: %d\n", saldoBanco); // Vale 700
+            }
+
+   </pre>
+   <p>
+       Esta situación se resuelve facilmente con punteros. Vamos a ver como sería el ejemplo modificado
+   </p>
+   
+   
+   <pre>
+             int main()
+             {
+             int saldoBanco = 200;
+             int aumento = 500;
+             aumentarSaldo(&saldoBanco, aumento);
+
+
+             return 0;
+            }
+
+            void aumentarSaldo(int * saldo, int importe)
+            {
+            *saldo += importe;
+            }
+   </pre>
+   <p>
+       En este caso, el resultado si es el esperado, puesto que se le ha pasado a la función la dirección de memoria donde queremos hacer modificaciones. Cuando hacemos modificaciones con el operador '*'
+       estamos haciendo los cambios sobre el contenido que hay en la dirección de memoria especificada. Al retornar la función, se elimina lo que se elimina es la copia al puntero, que se le pasó como parámetro, pero el contenido si que ha sido cambiado.
+       
+       <br>
+       <br>
+       <br>
+       <br>
+       Para más información sobre punteros o C , puedes consultar la documentación en el apartado de  <a href="externas.html">herramientas externas</a>
+   </p>
+   
+   
+   
+   
+   
+        </div>
+        <script type="text/javascript" src="js/bootsrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    </body>
+</html>

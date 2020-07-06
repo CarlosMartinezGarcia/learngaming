@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aprende a programar jugando</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+          <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/DungeonCodeWeb.json", {onProgress: UnityProgress});
+    </script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>LearnGaming</h1>
+        
+        </div>
+        
+        <div class="barra">
+             
+			<ul>
+				<li class="barra-primero"><a href="index.html">Inicio</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li><a href="desarrollo.html">En desarrollo...</a></li>
+			</ul>
+            
+            
+        </div>
+        <div class="barra-lateral">
+           
+                <div class="sidebar-header">
+                <h2>Menú</h2>
+                </div>
+         
+            
+            <div class="secciones">
+             <ul class="menu-lateral">
+                 <li class="externo"><input type="checkbox" id="lecciones"> <label for=lecciones>Lecciones</label>
+                  <ul class="interno">
+                   <li><a href="java.html">Java </a></li>
+                   <li><a href="c.html">C</a></li>
+                   <li><a href="html.html">HTML</a></li>
+                   <li><a href="css.html">CSS </a></li>
+                  </ul>
+                  </li>
+
+               <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Juegos</label>
+               <ul class="interno">
+                <li><a href="JuegoDungeon.html">Dungeon Code</a></li>
+
+                </ul>
+                </li>
+                 <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Herramientas externas</label>
+                 <ul class="interno">
+                   <li><a href="externas.html">Páginas de Referencia </a></li>
+                    <li><a href="https://www.codingame.com/start">CodinGame </a></li>
+                   <li><a href="https://checkio.org/">Checkio </a></li>
+                    <li><a href="https://codecombat.com/">CodeCombat </a></li>
+                 </ul>
+                     <li class="externo"><input type="checkbox" id="descargas"> <label for=juegos>Descargas</label>
+                     <ul class="interno">
+                      <li><a href="descarga.html">Dungeon Code</a></li>
+                      </ul>
+            </ul> 
+         
+         
+        
+            
+           </div>  
+        </div>
+        <div class="contenido-principal">
+            <div class="webgl-content">
+                  <div id="unityContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Dungeon Code</div>
+      </div>
+                
+                
+                
+                
+                
+                
+                
+            </div>   
+            
+            
+            
+        </div>
+        <script type="text/javascript" src="js/bootsrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    </body>
+</html>
+
+ 
+  

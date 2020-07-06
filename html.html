@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aprende a programar jugando</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>LearnGaming</h1>
+        
+        </div>
+        
+        <div class="barra">
+             
+			<ul>
+				<li class="barra-primero"><a href="index.html">Inicio</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+				<li><a href="desarrollo.html">En desarrollo...</a></li>
+			</ul>
+            
+            
+        </div>
+        <div class="barra-lateral">
+           
+                <div class="sidebar-header">
+                <h2>Menú</h2>
+                </div>
+         
+            
+            <div class="secciones">
+             <ul class="menu-lateral">
+                  <li class="externo"><input type="checkbox" id="lecciones"> <label for=lecciones>Lecciones</label>
+                  <ul class="interno">
+                   <li><a href="java.html">Java </a></li>
+                   <li><a href="c.html">C</a></li>
+                   <li><a href="html.html">HTML</a></li>
+                   <li><a href="css.html">CSS </a></li>
+                  </ul>
+                  </li>
+
+               <li class="externo"><input type="checkbox" id="juegos"> <label for=juegos>Juegos</label>
+               <ul class="interno">
+                <li><a href="JuegoDungeon.html">Dungeon Code</a></li>
+
+                </ul>
+                </li>
+                <li class="externo"><input type="checkbox" id="herramientas"> <label for=juegos>Herramientas externas</label>
+                 <ul class="interno">
+                   <li><a href="externas.html">Páginas de Referencia </a></li>
+                    <li><a href="https://www.codingame.com/start">CodinGame </a></li>
+                   <li><a href="https://checkio.org/">Checkio </a></li>
+                    <li><a href="https://codecombat.com/">CodeCombat </a></li>
+                 </ul>
+                    <li class="externo"><input type="checkbox" id="descargas"> <label for=juegos>Descargas</label>
+                     <ul class="interno">
+                      <li><a href="descarga.html">Dungeon Code</a></li>
+                      </ul>
+            </ul> 
+         
+         
+        
+            
+           </div>  
+        </div>
+        <div class="contenido-principal">
+              <div class="indice">
+            <h1>Indice</h1>
+    
+            <ol class="lista-indice">
+            <li><a href=#Introduccion>Introduccion</a></li>
+            <li><a href=#Basic>Características básicas</a></li>
+            <li><a href=#Texto>Texto</a></li>
+             <li><a href=#Imagenes>Imagenes</a></li>   
+             <li><a href=#Tablas>Tablas</a></li>
+             <li><a href=#Listas>Listas</a></li>
+             <li><a href=#Enlaces>Enlaces</a></li>
+            </ol>
+                
+                
+                      </div>  
+    
+             <h2 style="text-align: left" id="Introduccion">1.  Introduccion</h2>
+             <p>
+                 HTML (Hyper Text Markup Language) es el lenguaje estándar para la creación de páginas webs. Mediante el uso de etiquetas podemos describir la estructura de la página
+                 web y dichas etiquetas le dicen al navegador como mostrar la web.<br>
+                 Inicialmente, las páginas solo mostraban el contenido HTMl, pero con el desarrollo del estándar HTMl por el W3C, las páginas empezaron a incluir
+                 también información sobre el estilo de sus contenidos (CSS) y posteriormente código de aplicaciones (JavaScript)
+                         </p>
+        <HR width="20%"> 
+           <h2 style="text-align: left" id="Basic">2.  Características básicas</h2>
+           <br>
+              <h5 style="text-align: left">2.1 Estructura</h5>
+              <p>Las páginas HTML tienen dos partes diferenciadas: la cabecera y el cuerpo. La cabecera incluye información relacionada con la página como puede ser el título
+                  o su idioma. El cuerpo contiene todos los elementos que se quiere se muestren al cargar la página. <br>
+                  La cabecera irá encerrada por la etiqueta head, mientras que el cuerpo se encerrará con la etiqueta body. Además la etiqueta html mostrará el principio y fin del documento. <br>
+                  Adicionalmente, existirá obligatoriamente una primera  linea llamada doctype que le dice al navegador la versión de html a ejecutar.
+             </p>
+             <pre>
+
+                 &lt;!DOCTYPE html&gt;   
+                 &lt;html&gt;
+
+                 &lt;head&gt;
+                 &lt;title&gt;Mi primera Web&lt;/&gt;
+                 &lt;/head&gt;
+
+                 &lt;body&gt;
+                 &lt;p&gt;Aprender HTML puede ser muy sencillo&lt;/p&gt;
+                 &lt;/body&gt;
+
+                 &lt;/html&gt;
+
+             </pre>
+                 <br>
+              <h5 style="text-align: left">2.2 Etiquetas</h5>
+              <p> En HTML5 existen unas 114 etiquetas, algunas de ellas ya obsoletas. Las etiquetas más usadas son: a, br, button, col,data,div,font,font,footer,h1-h6,head,
+              header,hr,html,img,input,label,li,link,nav,ol,option,script,span,strong,style,table,td,th,thead,tr y ul. Puedes consultar información sobre las etiquetas desde el apartado de herramientas externas.
+              <br>
+              A pesar de la extensa lista de etiquetas, no es necesario para la elaboración de páginas complejas. Para ello se necesitan atributos, que a su vez son usados por CSS y JavaScript en ocasiones para cambiar el estilo
+              y hacer la página dinámica respectivamente.</p>
+              
+                 <br>
+                 <h5 style="text-align: left" id="Atributos">2.3 Atributos</h5>
+          
+             <p>
+              Un atributo proporciona información adicional sobre un elemento HTML. Todos los elementos HTML pueden tener atributos que irán dentro de la etiqueta inicial y serán del tipo nombre/valor.
+              Por ejemplo la etiqueta a, se usa para incluir enlaces en la web, y si no se le pone ningún atributo, no se puede referenciar a que dirección apunta dicho enlace. Para ello se usa el atributo href y el valor
+              asignado será la dirección. Por ejemplo:
+                  </p>
+             <pre>
+             &lt;a href="https://www.w3schools.com"&gt; Pincha para visitar la página&lt;/a&gt;    
+
+             </pre>
+                 
+                 Los atributos tienen
+                 
+                     
+            <HR width="20%"> 
+               <h2 style="text-align: left" id="Texto">3.  Texto</h2>
+             <p>
+                 La mayoría de páginas webs, están compuestas casi en su totalidad por texto. Existen muchos etiquetas para texto, con diferentes funcionalidades, y vamos a ver algunas de las más importantes.
+                   </p>
+                   <br>
+                  <h5 style="text-align: left" id="Atributos">3.1 Párrafos</h5>
+                  <p> Una de las más repetidas en las páginas web es la etiqueta p. La etiqueta p, nos permite definir los párrafos que conforman nuestra página web. 
+                 Los párrafos siempre empiezan en una nueva linea, y el navegador rellenará con espacios en blanco (margen) antes y después del párrafo.
+                 Importante mencionar que aunque escribamos el párrafo en varías lineas o añadamos muchos espacios, la etiqueta p hará que el navegador los
+                 ignore y se escribirá todo en una misma linea.
+                  </p>
+                  <pre>
+                 &lt;p&gt;Esto es un párrafo&lt;/p&gt;
+
+                 &lt;p&gt;Esto
+                 seguirá siendo un párrafo
+                 escrito en una sola
+                 linea 
+                 &lt;/p&gt;
+                  </pre>
+                  <p>
+                      Si queremos añadir una nueva linea, deberemos usar la etiqueta br. Esta etiqueta es una etiqueta "vacía", lo que significa que no hace tiene  etiqueta de cierre.
+                  </p>
+                  <pre>
+                  &lt;p&gt; Esto &lt;br&gt;si es un párrafo representado en &lt;br&gt; varias lineas y escrito en una sola con la etiqueta p &lt;p&gt;
+                  </pre>
+                  
+                  En algunos casos, nos conviene y nos es más sencillo, que el navegador muestre el texto con el formato original, ya sea porque favorece la legibilidad del texto, o porque dicho
+                  texto debe ser procesado por alguna aplicación. En estos casos se usa la etiqueta pre.
+                  
+                  <pre>
+
+                  &lt;pre&gt; Este texto     se     muestra
+                  con los espacios y las nuevas     lineas
+                  tal 
+                  y      como    lo escribimos
+                  &lt;/pre&gt;
+                  </pre>
+                  <p>
+                      Para más información sobre etiquetas para dar formato al texto como strong,ins y del , consulta la documentación del apartado herramientas externas.</p>
+                 <h5 style="text-align: left" id="Atributos">3.2 Secciones</h5>
+                 <p>
+                     Las secciones se suelen usar para los títulos. En HTML vienen definidas las etiquetas h1,h2,h3,h4,h5,h6 para la creación de secciones. Están ordenadas
+                     de manera que h1 es la sección más importante y h6 la que menos.
+                     <br>
+                     Para poder ver la diferencia, puedes fijarte en que los apartados que figuran en el índice de esta web estan escritos con la etiqueta h2, mientras que los subapartados usan la etiqueta h5
+                                     </p>      
+                                      <HR width="20%"> 
+                         <h2 style="text-align: left" id="Imagenes">4. Imagenes</h2>
+             <p>Otro elemento fundamental en una página web son las imágenes ya que nos pueden mejorar notablemente el diseño. Para incluir imágenes se usa la etiqueta vacía img y requiere obligatoriamente
+                 el atributo src que es la URL de la imagen a cargar. Además se usa muy habitualmente el atributo alt, que especifica el texto alternativo a mostrar si falla la carga de la imagen.
+             </p>
+             <pre>
+
+                                           &lt;img src="images/logoHTML.png" alt="Logo de HTML"&gt;
+             </pre>
+           
+             <img src="images/logoHTMl.png" alt="Logo de HTML" style="padding-left: 250px"/>
+          <HR width="20%"> 
+            <h2 style="text-align: left" id="Tablas">5. Tablas</h2>
+            <p>
+              HTML incluye soporte de tablas desde sus primeras versiones. Estas nos permiten almacenar información en columnas y filas. Para ello
+              se usan las etiquetas table, td,tr y th.
+                          </p>
+
+            <pre>
+                    &lt;table &gt;
+                    &lt;tr&gt;
+                    &lt;th&gt;Nombre&lt;/th&gt;
+                    &lt;th&gt;Apellido&lt;/th&gt;
+                    &lt;th&gt;Edad&lt;/th&gt;
+                    &lt;/tr&gt;
+                    &lt;tr&gt;
+                    &lt;td&gt;Juan&lt;/td&gt;
+                    &lt;td&gt;López&lt;/td&gt;
+                    &lt;td&gt;45&lt;/td&gt;
+                    &lt;/tr&gt;
+
+                    &lt;td&gt;David&lt;/td&gt;
+                    &lt;td&gt;Perez&lt;/td&gt;
+                    &lt;td&gt;19&lt;/td&gt;
+                    &lt;/tr&gt;
+
+                    &lt;/tr&gt;
+                    &lt;/table&gt;
+            </pre>
+            <table style="width:100%;margin: 4px">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Edad</th>
+  </tr>
+  <tr>
+    <td>Juan</td>
+    <td>López</td>
+    <td>45</td>
+  </tr>
+  <tr>
+    <td>David</td>
+    <td>JPerez</td>
+    <td>94</td>
+  </tr>
+</table>
+                            <HR width="20%"> 
+            <h2 style="text-align: left" id="Listas">6. Listas</h2>
+            <p>Las listas nos servirán para agrupar elementos que estén relacionados entre ellos. Los dos tipos de listas principales son las listas ordenadas y las listas no ordenadas. </p>
+            <h5 style="text-align: left" id="Atributos">6.1 Listas no ordenadas</h5>
+            <p> Las listas no ordenadas es el tipo de lista mas simple. Como su nombre indica, una lista no ordenada es un conjunto de elementos relacionados entre si pero que no tienen ningun
+                orden específico. Las etiquetas usadas para las listas no ordenadas son li y ul (list item y unordered list respectivamente)
+            <pre>
+   Lista de colores:
+   &lt;ul&gt;
+   &lt;li&gt;Rojo&lt;/li&gt;
+   &lt;li&gt;Azul&lt;/li&gt;
+   &lt;li&gt;Verde&lt;/li&gt;
+   &lt;li&gt;Amarillo&lt;/li&gt;
+   &lt;li&gt;Morado&lt;/li&gt;
+   &lt;/ul&gt;
+
+            </pre>
+            <ul>
+                <li>Rojo</li>
+                <li>Azul</li>
+                <li>Verde</li>
+                <li>Amarilo</li>
+                <li>Morado</li>
+            </ul>
+            
+            <h5 style="text-align: left" id="Atributos">6.2 Listas ordenadas</h5>
+            <p>Las listas ordenadas son casi idénticas pero los elementos siguen un orden concreto. Se pueden usar igualmente para listas que no tengan 
+            porque seguir un orden, como vamos a mostrar a continuación con el ejemplo de los colores para ver las diferencias más claramente.
+            <br>
+            Cambiando las etiquetas ul por ol, conseguiremos nuestra lista ordenada
+            </p>
+              
+              
+              
+                        <pre>
+   Lista de colores:
+   &lt;ol&gt;
+   &lt;li&gt;Rojo&lt;/li&gt;
+   &lt;li&gt;Azul&lt;/li&gt;
+   &lt;li&gt;Verde&lt;/li&gt;
+   &lt;li&gt;Amarillo&lt;/li&gt;
+   &lt;li&gt;Morado&lt;/li&gt;
+   &lt;/ol&gt;
+
+            </pre>
+            <ol>
+                <li>Rojo</li>
+                <li>Azul</li>
+                <li>Verde</li>
+                <li>Amarilo</li>
+                <li>Morado</li>
+            </ol>
+            <HR width="20%"> 
+            <h2 style="text-align: left" id="Enlaces">7. Enlaces</h2>
+            <p>Los enlaces fueron una de las claves del éxito de HTML ya que hizo que las páginas fueran mas interactivas.
+            Los enlaces generalmente referencian a otras webs, pero también pueden referenciar recursos como archivos,imagenes,etc.
+            <br>
+            Los enlaces se definen con la etiqueta a. Al igual que en las imágenes se usa el atributo href para la URL.
+            </p>
+            <pre>
+&lt;a href="index.html"&gt;Pincha para volver al inicio de nuestra página&lt;/a&gt;
+            </pre>
+            <a href="index.html">Pincha para volver al inicio de nuestra página</a>
+            <HR width="20%"> 
+               <p>Aquí finaliza nuestro manual de HTML. Si quieres seguir aprendiendo, puedes consultar la documentación accesible desde  <a href="externas.html">herramientas externas</a></p> 
+        </div>
+     
+       
+        <script type="text/javascript" src="js/bootsrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    </body>
+</html>
